@@ -1471,13 +1471,7 @@ DigiTask::DigiTask(edm::ParameterSet const& ps)
           //if (!_filter_QIE1011.filter(did)) {
           _cSumQvsBX_SubdetPM_QIE1011.fill(did, bx, sumQ);
           //}
-          _cTimingCutvsiphi_SubdetPM.fill(did, timing);
-          _cTimingCutvsieta_Subdet.fill(did, timing);
-          _cOccupancyCutvsiphi_SubdetPM.fill(did);
-          _cOccupancyCutvsieta_Subdet.fill(did);
-          _cOccupancyCutvsiphivsLS_SubdetPM.fill(did, _currentLS);
-          //				_cOccupancyCutvsSlotvsLS_HFPM.fill(did, _currentLS);
-          _xUniHF.get(eid)++;
+	  _xUniHF.get(eid)++;
         }
         if (_ptype == fOnline || _ptype == fOffline) {
           _cTimingCutvsiphi_SubdetPM.fill(did, timing);
