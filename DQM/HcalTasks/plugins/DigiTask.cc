@@ -264,12 +264,12 @@ DigiTask::DigiTask(edm::ParameterSet const& ps)
                                0);
 
   //	Occupancy w/ a cut
-  _cOccupancyCutvsLS_Subdet.initialize(_name,
-                                       "OccupancyCutvsLS",
-                                       hcaldqm::hashfunctions::fSubdet,
-                                       new hcaldqm::quantity::LumiSection(_maxLS),
-                                       new hcaldqm::quantity::ValueQuantity(hcaldqm::quantity::fN_to8000),
-                                       0);
+  //_cOccupancyCutvsLS_Subdet.initialize(_name,
+  //                                     "OccupancyCutvsLS",
+  //                                     hcaldqm::hashfunctions::fSubdet,
+  //                                     new hcaldqm::quantity::LumiSection(_maxLS),
+  //                                     new hcaldqm::quantity::ValueQuantity(hcaldqm::quantity::fN_to8000),
+  //                                     0);
   _cOccupancyCut_depth.initialize(_name,
                                   "OccupancyCut",
                                   hcaldqm::hashfunctions::fdepth,
@@ -707,7 +707,7 @@ DigiTask::DigiTask(edm::ParameterSet const& ps)
 
   _cOccupancyvsLS_Subdet.book(ib, _emap, _subsystem);
   _cOccupancyCut_depth.book(ib, _emap, _subsystem);
-  _cOccupancyCutvsLS_Subdet.book(ib, _emap, _subsystem);
+  //_cOccupancyCutvsLS_Subdet.book(ib, _emap, _subsystem);
 
   _cLETDCTimevsADC_SubdetPM.book(ib, _emap, _subsystem);
   _cLETDCvsADC_2bit_SubdetPM.book(ib, _emap, _filter_TDC2bit, _subsystem);
